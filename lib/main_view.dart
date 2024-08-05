@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_page/preparation_time_view.dart';
 import 'package:recipe_page/title_view.dart';
 
 class MainView extends StatelessWidget {
@@ -10,6 +11,7 @@ class MainView extends StatelessWidget {
         children: [
           Image.asset("assets/images/Omelette.jpeg"),
           const TitleView(),
+          const PreparationTimeView(),
         ],
       ),
     );

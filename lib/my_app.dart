@@ -6,6 +6,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: MyBehavior(),
+          child: child!,
+        );
+      },
       home: const Scaffold(
         backgroundColor: Colors.white,
         body: MainView(),
@@ -15,4 +21,10 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+class MyBehavior extends ScrollBehavior {
+  @override
+  ScrollPhysics getScrollPhysics(BuildContext context) =>
+      const ClampingScrollPhysics();
 }

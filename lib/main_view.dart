@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_page/ingredients_view.dart';
+import 'package:recipe_page/instructions_view.dart';
 import 'package:recipe_page/preparation_time_view.dart';
 import 'package:recipe_page/title_view.dart';
 
@@ -20,7 +21,8 @@ class MainView extends StatelessWidget {
               thickness: 1.0,
               color: Colors.grey,
             ),
-          )
+          ),
+          const InstructionsView(),
         ],
       ),
     );
